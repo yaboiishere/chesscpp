@@ -1,4 +1,6 @@
-#include "figures.cpp"
+#ifndef _board_h_included_
+#define _board_h_included_
+#include "figures.h"
 class Square {
  public:
   bool color;
@@ -16,4 +18,4 @@ public:
     void display();
 };
 
-
+#endif

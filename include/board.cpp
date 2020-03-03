@@ -1,4 +1,4 @@
-#include<board.h>
+#include"board.h"
 #include<iostream>
 using namespace std;
 Board::Board(){
@@ -21,6 +21,7 @@ void Board::display(){
         cout<<"\n";
     }
 }
+Square::Square(){};
 Square::Square(bool c, int p[2]){
     color = c;
     pos[0]=p[0];

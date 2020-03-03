@@ -1,10 +1,8 @@
 #include"figures.h"
 Figure Figure::operator=(Figure *a){
-    Figure c;
-    c.color = a->color;
-    c.str = a->str;
-    return c;
+    return *a;
 }
+void Figure::move(){};
 Figure::Figure(){};
 char Figure::display(){/*to be implemented*/return 'f';};
 bool Figure::exist(){

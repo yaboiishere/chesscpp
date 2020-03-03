@@ -1,11 +1,13 @@
+#ifndef _figures_h_included_
+#define _figures_h_included_
 class Figure{
    public:
     Figure();
     virtual bool exist();
-    virtual void move(char[8][8]);
+    virtual void move();
     virtual char display();
     Figure operator=(Figure*);
-   protected:
+//    protected:
     int pos[2];
     bool color;
     int str;
@@ -26,3 +28,4 @@ public:
     char display();
 };
 
+#endif

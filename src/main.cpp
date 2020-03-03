@@ -1,23 +1,14 @@
 #include <iostream>
 #include "../include/figures.h"
 #include "../include/board.h"
-#if __has_include(<../include/figures.h>)
-#include <../include/figures.h>
-#endif
-
-#if __has_include(<../include/board.h>)
-#include <../include/board.h>
-#endif
-
-#if __has_include(<iostream>)
-#include <iostream>
-#endif
 
 using namespace std;
-Figure initBoard(Figure[8][8]);
+// Figure initBoard(Figure[8][8]);
 int main() {
-    Figure B;
+    Board B;
     B.display();
+    int a;
+    cin >> a;
 }
 
 
