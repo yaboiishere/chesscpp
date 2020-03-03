@@ -1,0 +1,159 @@
+# 1 "c:\\Users\\mixai\\Documents\\cpp\\Chesscpp\\src\\main.cpp"
+# 1 "c:\\Program Files\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin//"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "c:\\Users\\mixai\\Documents\\cpp\\Chesscpp\\src\\main.cpp"
+
+
+# 1 "c:/Users/mixai/Documents/cpp/Chesscpp/include/board.h" 1
+       
+# 1 "c:/Users/mixai/Documents/cpp/Chesscpp/include/figures.cpp" 1
+# 1 "c:/Users/mixai/Documents/cpp/Chesscpp/include/figures.h" 1
+class Figure{
+   public:
+    Figure();
+    virtual bool exist();
+    virtual void move(char[8][8]);
+    virtual char display();
+    Figure operator=(Figure*);
+   protected:
+    int pos[2];
+    bool color;
+    int str;
+
+};
+class None: private Figure{
+public:
+    None(bool);
+    void move();
+    char display();
+    bool exist();
+};
+
+class Pawn: public Figure{
+public:
+    Pawn(bool);
+    void move();
+    char display();
+};
+# 2 "c:/Users/mixai/Documents/cpp/Chesscpp/include/figures.cpp" 2
+Figure Figure::operator=(Figure *a){
+    Figure c;
+    c.color = a->color;
+    c.str = a->str;
+    return c;
+}
+Figure::Figure(){};
+char Figure::display(){ };
+bool Figure::exist(){
+    return 1;
+}
+bool None::exist() {
+    return 0;
+}
+Pawn::Pawn(bool c){
+    color = c;
+    if(c){
+        str = 10;
+    }else{
+        str = -10;
+    }
+}
+void Pawn::move(){
+    if(color){
+
+    }
+}
+char Pawn::display(){
+    if(color)
+    return 'p';
+    else
+    return 'P';
+}
+# 3 "c:/Users/mixai/Documents/cpp/Chesscpp/include/board.h" 2
+class Board{
+public:
+    Square bd[8][8];
+    Board();
+    void display();
+};
+class Square{
+    public:
+    bool color;
+    int pos[2];
+    Figure *f;
+    Square();
+    Square(bool, int[2]);
+    Square operator=(Square*);
+    char display();
+};
+# 4 "c:\\Users\\mixai\\Documents\\cpp\\Chesscpp\\src\\main.cpp" 2
+using namespace std;
+Figure initBoard(Figure[8][8]);
+int main() {
+    Figure B;
+    B.display();
+}
+
+
+void initBoard(Figure *B[8][8]){
+    for(int i=0;i<8;i++){
+        for(int j=0;j<8;j++){
+            if(i==0){
+                switch (j){
+                    case 0:
+                        break;
+                    case 1:
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        break;
+                    case 4:
+                        break;
+                    case 5:
+                        break;
+                    case 6:
+                        break;
+                    case 7:
+                        break;
+                    }
+                continue;
+            };
+            if(i==7){
+                switch (j){
+                    case 0:
+                        break;
+                    case 1:
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        break;
+                    case 4:
+                        break;
+                    case 5:
+                        break;
+                    case 6:
+                        break;
+                    case 7:
+                        break;
+                    }
+                continue;
+            };
+            if(i==1){
+                int pos[2] = {i,j};
+                Figure *f = new Pawn(1);
+                B[i][j] = f;
+                continue;
+            }
+            if (i == 6) {
+                int pos[2] = {i, j};
+                Figure *f = new Pawn(0);
+                B[i][j] = f;
+                continue;
+            }
+        }
+
+    }
+}
