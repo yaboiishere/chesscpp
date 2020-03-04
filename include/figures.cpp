@@ -1,4 +1,4 @@
-#include"figures.h"
+#include <figures.h>
 Figure Figure::operator=(Figure *a){
     return *a;
 }

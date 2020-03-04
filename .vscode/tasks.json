@@ -1,0 +1,22 @@
+{
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "g++ build active file",
+            "command": "g++",
+            "args": [
+                "-g",
+                "./src/main.cpp",
+                "-o",
+                "./include/figures.h",
+                "./include/figures.cpp",
+                "./include/board.h",
+                "./include/board.cpp"
+            ],
+            "options": {
+                "cwd": "C:\\Users\\mixai\\Documents\\cpp\\Chesscpp"
+            }
+        },
+    ],
+    "version": "2.0.0"
+}

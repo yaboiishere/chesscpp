@@ -5,10 +5,10 @@
 using namespace std;
 // Figure initBoard(Figure[8][8]);
 int main() {
-    Board B;
-    B.display();
-    int a;
-    cin >> a;
+    Board *B = new Board();
+    B->display();
+    cout<<"kk";
+    return 0;
 }
 
 

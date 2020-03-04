@@ -7,7 +7,7 @@ class Square {
   int pos[2];
   Figure *f;
   Square();
-  Square(bool, int[2]);
+  Square(bool);
   Square operator=(Square *);
   char display();
 };
